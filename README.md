@@ -15,7 +15,7 @@ The user would like to:
 
 ## SetUp / Installation Requirements
 ### Prerequisites
-- python3.9
+- python3.8.10
 - pip
 - Cloning
 #### Procudure
@@ -27,12 +27,12 @@ $ Navigate in the zip file that has been downloaded and unzip it
 Running the Application
 
 To run the application, in your terminal:
-- <#!/usr/bin/env python3.9
+- #!/usr/bin/env python3.8.10
 - chmod +x run.py
 - ./run.py
 
 ### Technologies Used
-Python3.9
+Python3.8.10
 
 ### Contacts
 ----
