@@ -22,25 +22,43 @@ class Account:
     '''
     Account.account_list.remove(self)
     
+    
   @classmethod
   def find_by_number(cls,number):
-      '''
-      Method that takes in a number and returns a account that matches that number.
+    
+    '''
+    Method that takes in a number and returns an account that matches that number.
 
-      Args:
-          number: Phone number to search for
-      Returns :
-          Account of person that matches the number.
-      '''
+    Args:
+        number: Phone number to search for
+    Returns :
+        Account of person that matches the number.
+    '''
 
-      for account in cls.account_list:
-          if account.phone_number == number:
-              return account
-              
-    
-    
-    
-      
+    for account in cls.account_list:
+        if account.phone_number == number:
+            return account
+  
+  @classmethod
+  def account_exist(cls,number):
+    '''
+    Method that checks if a account exists from the account list.
+    Args:
+        number: Phone number to search if it exists
+    Returns :
+        Boolean: True or false depending if the account exists
+    '''
+    for account in cls.account_list:
+        if account.phone_number == number:
+                return True
+
+    return False
+          
+          
+
+
+
+  
 
   def __init__(self,first_name,last_name,number,email):
     
