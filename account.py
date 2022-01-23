@@ -49,10 +49,19 @@ class Account:
         Boolean: True or false depending if the account exists
     '''
     for account in cls.account_list:
-        if account.phone_number == number:
-                return True
+      
+      if account.phone_number == number:
+        return True
+      
+      return False
+    
+  @classmethod
+  def display_accounts(cls):
+      '''
+      method that returns the account list
+      '''
+      return cls.account_list
 
-    return False
           
           
 
