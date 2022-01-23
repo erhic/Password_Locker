@@ -68,3 +68,19 @@ class TestAccount(unittest.TestCase):
         self.new_account.delete_account()# Deleting a account object
         self.assertEqual(len(Account.account_list),1)
     
+    
+     #...Test Case--5
+    def test_find_account_by_number(self):
+        '''
+        test to check if we can find a account by phone number and display information
+        '''
+
+        self.new_account.save_account()
+        test_account = Account("Test","user","0700000000","test@user.com") # new account
+        test_account.save_account()
+
+        found_account = Account.find_by_number("0700000000")
+
+        self.assertEqual(found_account.email,test_account.email)   
+        
+        
