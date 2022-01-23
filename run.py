@@ -3,7 +3,7 @@
 from account import Account
 from credential import Credential
 
-#Creating a Account
+#Creating a Account Function
 def create_contact(fname,lname,phone,email):
     
     '''
@@ -11,3 +11,12 @@ def create_contact(fname,lname,phone,email):
     '''
     new_account = Account(fname,lname,phone,email)
     return new_account
+
+#   Save account Function
+def save_account(account):
+    
+    '''
+    Function to save account
+    '''
+    account.save_account()
+    
