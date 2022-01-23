@@ -90,9 +90,18 @@ class TestAccount(unittest.TestCase):
         '''
 
         self.new_account.save_account()
-        test_account = Account("Test","user","0700000000","test@user.com") # new contact
+        test_account = Account("Test","user","0700000000","test@user.com") # new account
         test_account.save_account()
 
         account_exists = Account.account_exist("0700000000")
 
         self.assertTrue(account_exists)   
+        
+     #...Test Case---7
+    def test_display_all_accounts(self):
+        '''
+        method that returns a list of all account saved
+        '''
+
+        self.assertEqual(Account.display_accounts(),Account.account_list)
+        
