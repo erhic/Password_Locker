@@ -27,3 +27,11 @@ def del_account(account):
     '''
     account.delete_account()
     
+ #Finding an account Function
+def find_account(number):
+    '''
+    Function that finds a account by number and returns the account
+    '''
+    return Account.find_by_number(number)
+
+    
