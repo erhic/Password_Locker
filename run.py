@@ -42,3 +42,8 @@ def check_existing_account(number):
     return Account.account_exist(number)
 
     #  Displaying all accounts   
+def display_accounts():
+    '''
+    Function that returns all the saved accounts
+    '''
+    return Account.display_accounts()
