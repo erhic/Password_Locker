@@ -5,16 +5,24 @@ class Account:
 
     account_list = [] # Empty contact list
 
+        # saving account method
     def save_account(self):
 
-            '''
-            save_account method saves account objects into account_list
-            '''
+        '''
+        save_account method saves account objects into account_list
+        '''
 
-            Account.account_list.append(self)
+        Account.account_list.append(self)
 
 
-
+    # deleting account method
+    def delete_account(self):
+      '''
+      delete_account method deletes a saved account from the account_list
+      '''
+      
+      Account.account_list.remove(self)
+      
 
     def __init__(self,first_name,last_name,number,email):
 
