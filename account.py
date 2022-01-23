@@ -3,7 +3,7 @@ class Account:
   """
   Class that generates new instances of account details.
   """
-  account_list = [] # Empty contact list
+  account_list = [] # Empty account list
 
    # saving account method
   def save_account(self):

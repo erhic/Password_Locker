@@ -4,7 +4,7 @@ from account import Account
 from credential import Credential
 
 #Creating a Account Function
-def create_contact(fname,lname,phone,email):
+def create_account(fname,lname,phone,email):
     
     '''
     Function to create a new account
@@ -34,4 +34,11 @@ def find_account(number):
     '''
     return Account.find_by_number(number)
 
-    
+# Function to Check if an account exists
+def check_existing_account(number):
+    '''
+    Function that check if a account exists with use of number and return a Boolean
+    '''
+    return Account.account_exist(number)
+
+    #  Displaying all accounts   
