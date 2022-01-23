@@ -43,15 +43,28 @@ class TestAccount(unittest.TestCase):
         self.new_account.save_account() # saving the new account
         self.assertEqual(len(Account.account_list),1)
     
-     # ..  Test--3
+     # ...Test Case --3
 
     def test_save_multiple_account(self):
-            '''
-            test_save_multiple_account to check if we can save multiple account
-            objects to our account_list
-            '''
-            self.new_account.save_account()
-            test_account = Account("Test","user","0700000000","test@user.com") # new contact
-            test_account.save_account()
-            self.assertEqual(len(Account.account_list),2)
-            
+        '''
+        test_save_multiple_account to check if we can save multiple account
+        objects to our account_list
+        '''
+        self.new_account.save_account()
+        test_account = Account("Test","user","0700000000","test@user.com") # new account
+        test_account.save_account()
+        self.assertEqual(len(Account.account_list),2)
+        
+        
+    #...Test Case--4
+    def test_delete_account(self):
+        '''
+        test_delete_account to test if we can remove a account from our account list
+        '''
+        self.new_account.save_account()
+        test_account = Account("Test","user","0700000000","test@user.com") # new account
+        test_account.save_account()
+
+        self.new_account.delete_account()# Deleting a account object
+        self.assertEqual(len(Account.account_list),1)
+    
